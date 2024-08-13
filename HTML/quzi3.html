@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .circle { 
+            width: 100px;
+            height: 100px;
+
+            border-radius: 50px;
+
+            background-color: blue;
+            
+            box-shadow: inset -5px -5px 5px 5px;
+            }
+
+            .box_600 {
+                width: 300px;
+                height: 100px;
+                background-color: blue;
+                box-shadow: inset -5px -5px 5px 5px;
+            }
+
+            #wrap {
+                width: 300px;
+                height: 100px;
+                overflow: hidden;
+            }
+
+            .float_right { float: right;}
+            .float_left { float: left;}
+    </style>
+</head>
+<body>
+        <div id="wrap">
+            <div class="circle float_right"></div>
+            <div class="circle float_left"></div>
+        </div>
+            <div class="box_600"></div>
+</body>
+</html>

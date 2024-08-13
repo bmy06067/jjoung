@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box_wrap {
+            margin: auto;
+            width: 600px;
+            height: 150px;
+            position: relative;
+            background-color: gray;
+        }
+        #box_wrap2 {
+            margin: auto;
+            width: 600px;
+            height: 2000px;
+            position: relative;
+            background-color: rgba(216, 216, 216, 0.724);
+        }
+
+        ul { overflow: hidden; display: f;}
+        li {width: 100px;
+            float: left; padding: 1px;
+            list-style: none;
+            text-align: center;
+            color: white;
+            margin: auto;
+        }
+        .absolute{ position: absolute; }
+        .bottom { left: 0; bottom: 0; z-index: 10;}
+        .top { right: 0; top: 0; z-index: 10;}
+        .font_small {font-size: 5px;}
+        .div_color { background-color: azure;}
+    </style>
+</head>
+<body>
+    <div id="box_wrap2">
+        <div id="box_wrap">
+            <ul class="bottom absolute">
+                <li>HOME</li>
+                <li>회사소개</li>
+                <li>포트폴리오</li>
+                <li>채용</li>
+            </ul>
+
+                <div>
+                    <ul class="top absolute font_small">
+                    <li>로그인</li>
+                    <li>회원가입</li>
+                    <li>비밀번호찾기</li>
+                    </ul>
+                </div>
+        </div>
+    </div>
+    
+</body>
+</html>

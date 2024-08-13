@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <style>
+        ul {overflow: hidden;}
+        li {
+            width: 80px;
+            float: left; padding: 15px;
+            list-style: none;
+            text-align: center;
+            color: white;
+            background-color: gray;
+            cursor: pointer;
+        }
+        ul li:hover{
+            background-color: rgb(255, 211, 254);
+        }
+        ul li:active{
+            background-color: rgb(201, 255, 208);
+        }
+        li:first-child {
+            border-radius: 10px 0 0 10px;
+        }
+        li:last-child {
+            border-radius: 0 10px 10px 0;
+        }
+        li:nth-child(2n){
+            background-color: pink;
+        }
+        li:nth-last-child(2n+1){
+            background-color: lightblue;
+        }
+        ul li > a{
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="https://www.naver.com/">Naver</a></li>
+        <li><a href="https://www.google.com/">Google</a></li>
+        <li><a href="https://www.daum.net/">Daum</a></li>
+        <li><a href="http://www.tjdaewoo.co.kr/">DWAcademy</a></li>
+    </ul>
+</body>
+</html>

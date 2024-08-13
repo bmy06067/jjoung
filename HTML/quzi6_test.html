@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            font-size: 12px;
+        }
+        #wrap{
+            width: 1200px;
+            height: 250px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .box_25{
+            width: 25%;
+            height: 80px;
+
+            float: left;
+        }
+        .box{
+            width: 9.375%;
+            height: 80px;
+            float: left;
+        }
+        .bottom{
+            position: absolute;
+            bottom: 0px;
+            width: 100%;
+            display: flex;
+        }
+        .hidden{
+            overflow: hidden;
+        }
+
+        .black{background-color: black;}
+        .red{background-color: red;}
+        .orangered{background-color: orangered;}
+        .yellow{background-color: yellow;}
+        .green{background-color: greenyellow;}
+        .blue{background-color: blue;}
+        .darkblue{background-color: darkblue;}
+        .violet{background-color: violet;}
+        .violet{background-color: blueviolet;}
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="bottom hidden">
+            <div class="box_25 black"></div>
+            <div id="box2" class="box red absolute"></div>
+            <div id="box3" class="box orangered absolute"></div>
+            <div id="box4" class="box yellow absolute"></div>
+            <div id="box5" class="box green absolute"></div>
+            <div id="box6" class="box blue absolute"></div>
+            <div id="box7" class="box darkblue absolute"></div>
+            <div id="box8" class="box viewport absolute"></div>
+            <div id="box9" class="box blueviolet absolute"></div>
+        </div>
+    </div>
+</body>
+</html>
