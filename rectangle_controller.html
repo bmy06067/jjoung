@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #box {
+        width: 100px;
+        height: 100px;
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    가로 : <button id="wp" onclick="hori('+');">＋</button>
+    <button id="wm" onclick="hori('-');">－</button>&nbsp;&nbsp; 세로 :<button
+      id="hp"
+      onclick="verti('+')"
+    >
+      ＋
+    </button>
+    <button id="hm" onclick="verti('-')">－</button>&nbsp;&nbsp; color :
+
+    <select name="color" onchange="">
+      <option>choice...</option>
+      <option>red</option>
+      <option>blue</option>
+      <option>purple</option>
+    </select>
+    <hr />
+    <div id="box"></div>
+
+    <script>
+      let box = document.querySelector("div#box");
+
+      function hori(sign) {
+        //alert("sign");
+        switch (sign) {
+          case +"+":
+            box.style.width += 5;
+            console.log[box.style.width];
+            break;
+          case "-":
+            box.style.width -= 5;
+            break;
+        }
+      }
+      function verti(sign) {
+        //alert("sign");
+        switch (sign) {
+          case +"+":
+            box.style.height += 5;
+            console.log[box.style.height];
+            break;
+          case "-":
+            box.style.width -= 5;
+            break;
+        }
+      }
+      function color() {
+        alert("change color");
+      }
+    </script>
+  </body>
+</html>
