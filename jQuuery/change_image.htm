@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div#picture{
+            width: 300px;
+            height: 400px;
+
+            background-color: gray;
+
+            background-position: no-repeat;
+            background-size: cover;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div id="picture"></div>
+    <br/>
+    <button target-img="1.jpg">1</button>&nbsp;&nbsp;
+    <button target-img="2.jpg">2</button>&nbsp;&nbsp;
+    <button target-img="3.jpg">3</button>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $('button').click(function(){
+            //alert((this).attr("target-img"));
+            let fileName = $(this).attr("target-img");
+            let src="images/"+fileName;
+
+            $('div#picture').css("background-image","url"('"+src+'));
+        });
+    </script>
+</body>
+</html>
