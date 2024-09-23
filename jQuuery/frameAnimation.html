@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fraem Animation</title>
+    <style>
+        div#animate{
+            width: 300px;
+            height: 400px;
+
+            background-color: gray;
+            
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+    <button id="start_btn">start</button>&nbsp;&nbsp;&nbsp;
+    <button id="stop_btn">stop</button><br>
+
+    <img id="image">
+
+    <div id="animate"></div>
+
+    <script>
+        let image = document.querySelector('#image');
+        let div = document.querySelector('div#animate');
+
+        let i=0
+        
+
+        let motion;
+
+        document.querySelector('#start_btn').onclick=function(){
+            //alert("start btn");
+            if(!motion) {
+                motion = setInterval(function(){
+                image.src= "images/"+(i%15)+".png";
+
+                div.style.backgroundImage="url('"+"images/"+(i%15)+".png"+"')";
+                i=i+1;
+                },1000/20);
+            }
+        };
+            
+        document.querySelector('#stop_btn').onclick=function(){
+            //alert("stop btn");
+            clearInterval(motion);
+            motion=null;
+        };
+
+    </script>
+</body>
+</html>
