@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+main{
+    display: block;
+    width: 100%;
+    height: 100vh;
+    background-color: lightcyan;
+}
+section{
+    /* height: 100vh; */
+    border: 10px solid blue;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+
+section article{
+    width: 200px;
+    height: 100px;
+    background-color: aqua;
+    border: 1px solid black;
+}
+
+section article:nth-child(1){
+    order: 2;
+}
+section article:nth-child(2){
+    order: 1;
+}
+section article:nth-child(3){
+    order: 5;
+}
+section article:nth-child(4){
+    order: 3;
+}
+section article:nth-child(5){
+    order: 4;
+}
+section .inner h1{
+    font: bold 24px "arial";
+    color: #555;
+    text-align: center;
+    margin-bottom: 50px;
+}
+section .inner .wrap {
+    width: 100%;
+}
+
+section .inner .wrap article {
+    width: 280px;
+    float: left;
+    margin-right: 20px;
+}
+
+section .inner .wrap article .pic {
+    width: 100%;
+    height: 120px;
+    background: #333;
+    margin-bottom: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+section .inner .wrap article .pic img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
