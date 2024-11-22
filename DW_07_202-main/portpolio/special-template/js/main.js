@@ -1,20 +1,20 @@
-const swiper = new Swiper('.wrap',{
+const swiper = new Swiper('.wrap',{	
     direction: "horizontal",
-    loop: true,
+    loop: true,						
     pagination: {
         el: '.swiper-pagination',
         type: 'fraction'
+    },	
+    navigation : {				
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',			
     },
-    navigation : {
-        nextEl: '.siwper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-    spaceBetween : 0,
+    spaceBetween: 0,
     slidesPerView: "auto",
-    grabCursor: "true",
-    centeredslides : "true",
+    grabCursor: true,
+    centeredSlides :true,
     speed:1000,
-    effect:"coverflow",
+    effect:"coverflow",	
     coverflowEffect: {
         rotate: 50,
         stretch: -100,
@@ -23,23 +23,22 @@ const swiper = new Swiper('.wrap',{
         slideShadows: false,
     },
     autoplay: {
-        delay:1000,
-        disableOnINteraction: true
-    }
+        delay:1000,		
+        disableOnInteraction : true
+    }	
 });
 
 
-
+// .btnStart 요소를 찾아서 btnStart에 저장
 const btnStart = document.querySelector(".btnStart");
-
+// .btnStop 요소를 찾아서 btnStop에 저장
 const btnStop = document.querySelector(".btnStop");
 
 btnStart.onclick=function(event){
-    // alert("click start");
+    //alert("click start");
     swiper.autoplay.start();
 }
-
 btnStop.onclick=function(event){
-    // alert("click stop");
+    //alert("click stop");
     swiper.autoplay.stop();
 }
